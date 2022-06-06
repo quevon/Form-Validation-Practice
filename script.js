@@ -15,14 +15,46 @@ const passError = document.getElementById('passError');
 const confirmError = document.getElementById('confirmError');
 const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-// fname.onkeyup = () =>{
-//     fname.value = fname.value.charAt(0).toUpperCase() + fname.value.slice(1);
-// }
-// lname.onkeyup = () =>{
-//     lname.value = lname.value.charAt(0).toUpperCase() + lname.value.slice(1);
-// }
 
+//oninputs validations
+fname.oninput = () =>{
+    if(fname.value != ""){
+        fnameError.innerHTML = "";
+        console.log(fname.value);
+    }else{
+        fnameError.innerHTML = "Please enter your first name!";
+    }
+}
+lname.oninput = () =>{
+    if(lname.value != ""){
+        lnameError.innerHTML = "";
+    }else{
+        lnameError.innerHTML = "Please enter your last name!";
+    }
+}
+email.oninput = () =>{
+    if(email.value != ""){
+        emailError.innerHTML = "";
+    }else{
+        emailError.innerHTML = "Please enter your email!";
+    }
+}
+password.oninput = () =>{
+    if(password.value != ""){
+        passError.innerHTML = "";
+    }else{
+        passError.innerHTML = "Please enter your password!";
+    }
+}
+confirmPassword.oninput = () =>{
+    if(confirmPassword.value != ""){
+        confirmError.innerHTML = "";
+    }else{
+        confirmError.innerHTML = "Please confirm your password!";
+    }
+}
 
+//onsubmit validations
 function validateFirstName(e){
     if(fname.value == ""){
         fnameError.innerHTML = "Please enter your first name!";
@@ -68,6 +100,8 @@ function validatePassword(e){
         confirmError.innerHTML = "";
     }    
 }
+
+//form submit
 form.onsubmit = (e) =>{
     validateFirstName(e);
     validateLastName(e);
