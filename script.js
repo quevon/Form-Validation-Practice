@@ -20,7 +20,6 @@ const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0
 fname.oninput = () =>{
     if(fname.value != ""){
         fnameError.innerHTML = "";
-        console.log(fname.value);
     }else{
         fnameError.innerHTML = "Please enter your first name!";
     }
