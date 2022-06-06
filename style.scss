@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,500;0,600;0,700;1,100&family=Rubik:wght@500;600&family=Special+Elite&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form{
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 20px;
+        width: 500px;
+        input{
+            padding: 10px;
+            width: 100%;
+        }
+        #fname{
+            text-transform: capitalize;
+        }
+        #lname{
+            text-transform: capitalize;
+        }
+        .error{
+            color: red;
+            font-size: 15px;
+            padding-bottom: 10px;
+        }
+    }
+}
